@@ -1,3 +1,4 @@
 curl ipinfo.io/ip
 whatweb -v (pagina web)
 amass enum --passive -d (dominio) -o (archivo.txt)
+dirb (http://url/) (diccionario) *ataque de fuerza bruta a directorios web
