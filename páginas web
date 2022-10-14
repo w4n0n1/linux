@@ -1,0 +1,3 @@
+curl ipinfo.io/ip
+whatweb -v (pagina web)
+amass enum --passive -d (dominio) -o (archivo.txt)
