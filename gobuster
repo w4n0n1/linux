@@ -1,0 +1,9 @@
+escaneo a sitios web en busca de directorios usando listas de palabras
+escaneo basico 
+gobuster dir -u http://url/ -w /root/Escritorio/(diccionario.txt)
+
+esacaneo y imprime las url en pantalla 
+gobuster dir -u http://url/ -w /root/Escritorio/(diccionario.txt) -e
+
+Esto es para los momentos en que se especifica una búsqueda de extensión o extensiones de archivo específicas
+gobuster dir -u http://url/ -w /root/Escritorio/(diccionario.txt)  -x .php .txt .exe .jpg
