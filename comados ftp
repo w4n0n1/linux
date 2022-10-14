@@ -1,0 +1,4 @@
+ftp (ip)   #para conectarse 
+anonymous #usuario generico para iniciar sin contraseña
+get (nombre archivo)  #para descargar archivos
+ls #listar archivos
