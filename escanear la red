@@ -1,0 +1,4 @@
+crackmaexex (escaneo de red)
+nikto -h  (ip)
+nikto -h (http://url/) -C all
+netdiscover = para ver segmento de red
