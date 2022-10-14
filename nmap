@@ -1,0 +1,7 @@
+nmap -sS -sV (ip) *escaneo basico
+nmap -sS -sV -sC (ip) *script durante el analisis
+nmap -sV -script vuln (ip) -v *escaneo y buscara vulnerabilidades 
+nmap -sS -sV -p- (ip) *escaneo a todo los puertos
+nmap -sS -sV -A -T4 -p- --script vuln (ip) -o (nombrearchivo.txt) *el escaneo se guardara en un archivo 
+nmap -sS -sV (ip) -oX (nombrearchivo.xml)
+xsltproc (nombrearchivo.xml) -o (nombrearchivo.html) *el escaneo que se guardo en .xml lo pasamos a html 
