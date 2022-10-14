@@ -1,7 +1,7 @@
-mysql -u root -h (ip)  *para conectarse del terminal
-show databases;   *para ver bases de datos existentes
-use (nombre de la base)   *para entrar en la base de datos
-show tables;   *para ver que tablas tiene esa base de datos
-describe (nombre de la tabla)  *para ver columnas y de que tipo es la tabla
-select * from (nombre de tabla);  *para ver toda la informacion de una tabla
-select host, user from (tabla);   *trae informacion un poco mas ordenada 
+mysql -u root -h (ip)  #para conectarse del terminal
+show databases;   #para ver bases de datos existentes
+use (nombre de la base)   #para entrar en la base de datos
+show tables;   #para ver que tablas tiene esa base de datos
+describe (nombre de la tabla)  #para ver columnas y de que tipo es la tabla
+select * from (nombre de tabla);  #para ver toda la informacion de una tabla
+select host, user from (tabla);   #trae informacion un poco mas ordenada 
