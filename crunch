@@ -1,0 +1,4 @@
+#para crear diccionarios
+
+crunch 2 2 (palabras) -o rr.txt
+crunch 7 7 -t mos%%%% > dicionarioc.txt
