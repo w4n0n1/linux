@@ -1,0 +1,16 @@
+git clone https://github.com/exiftool/exiftool.git #instalacion 
+sudo apt-get install libimage-exiftool-perl # instalar el paquete necesario para ello (en el directorio exiftool)
+
+exiftool  <nombre_archivo> # Para extraer todos los metadatos de un archivo
+exiftool -H <nombre_archivo> # si necesitamos capturar los ids junto con las etiquetas exif en el formato Hexa-Decimal
+exiftool -common <nombre_archivo.jpg> # el siguiente comando que nos proporcionará la salida de las etiquetas Exif más comunes del archivo
+exiftool  -<nombre_etiqueta1>  -<nombre_etiqueta2>  <nombre_archivo> #  listar una meta-información particular de nuestro archivo 
+exiftool  <nombre_archivo> | grep GPS # extraer cordenadas GPS
+exiftool  -ThumbnailImage (nombre_archivo) > (salida) # extraer imagen en miniatura
+exiftool  "-*keyword*" <nombre_archivo> # extraer la información de metadatos asociada a algunas palabras clave específicas
+exiftool  -v <nombre_archivo> # El modo verbose genera información extendida, es decir, cuando añadimos [-v] al comando exiftool nos mostrará los datos completos sobre el proceso que está realizando.
+exiftool  -Make= “lo_que_agregaremos”  <nombre_archivo> # Para manipular o crear metadatos, los datos exif #"Make(etiqueta)" 
+exiftool  -all=  <nombre_archivo> # eliminar informacion de metadatos
+exiftool  -h (nombre_archivo) > (salida.html) # guardar salida en formato HTML
+exiftool (nombre_archivo) > (salida.txt) # guardar salida en TXT # cat <nombre_archivo> para leer
+exiftool <nombre_archivo.mp4> # extraer toda la información de metadatos de un archivo de vídeo mp4 
