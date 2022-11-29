@@ -2,3 +2,5 @@ crackmaexex (escaneo de red)
 nikto -h  (ip)
 nikto -h (http://url/) -C all
 netdiscover = para ver segmento de red
+sudo responder -I (interfac de red ej:eth0) # para envenenar la red 
+crackmapexec smb (segmento de red) # para descubrir la red
