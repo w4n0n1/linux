@@ -1,0 +1,2 @@
+dirb http://"url o ip"/ /ruta/del-diccionario/Escritorio/diccionario.txt # se lanza el comando con un diccionario especifico
+dirb http://"url o ip"/ # se lanza el comando con un diccionario por defecto
