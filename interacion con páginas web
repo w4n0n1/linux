@@ -2,3 +2,5 @@ curl ipinfo.io/ip
 whatweb -v (pagina web)
 amass enum --passive -d (dominio) -o (archivo.txt)
 dirb (http://url/) (diccionario) #ataque de fuerza bruta a directorios web
+lbd (dominio) # para buscar balanceadores de carga
+dirbuster # GUI - busqueda de directorios con diccionario
