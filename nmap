@@ -7,7 +7,7 @@ nmap -sS -sV -A -T4 -p- --script vuln (ip) -o (nombrearchivo.txt) #el escaneo se
 nmap -sS -sV (ip) -oX (nombrearchivo.xml)
 xsltproc (nombrearchivo.xml) -o (nombrearchivo.html) #el escaneo que se guardo en .xml lo pasamos a .html 
 
-nmap -sV --script=http-enum (url o ip)
+nmap -sV --script=http-enum (url o ip) #para ver directorios
 nmap --script hostmap-bfk -script-args hostmap-bfk.prefix=hostmap- (url o ip) # para descubrir el hosname
 nmap --script http-trace -d (url o ip) # para ver si es vulnerable a trace
 nmap -p80 --script http-waf-detect (url o ip) # para detectar ids, ips o waf 
