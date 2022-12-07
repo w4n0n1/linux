@@ -11,3 +11,4 @@ nmap -sV --script=http-enum (url o ip) #para ver directorios
 nmap --script hostmap-bfk -script-args hostmap-bfk.prefix=hostmap- (url o ip) # para descubrir el hosname
 nmap --script http-trace -d (url o ip) # para ver si es vulnerable a trace
 nmap -p80 --script http-waf-detect (url o ip) # para detectar ids, ips o waf 
+nmap -sn (dominio o red) # escaner que busca en una red mas dispositivos activos
