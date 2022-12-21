@@ -1,0 +1,7 @@
+# para conectarse 
+ssh usuario@ip  # se conectara por puerto por defecto
+ssh usuario@ip -p 4040 # -p para indicar un puerto en este ejemplo el 4040
+
+# una vez conectados por ssh podemos ingresar los siguientes comandos para cambiar a una terminar 
+script /dev/null -c bash
+bash -p
