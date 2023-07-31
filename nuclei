@@ -1,0 +1,5 @@
+nuclei -u www.ejemplo.com  ## escaner con todas las plantillas disponibles 
+nuclei -t <ruta_a_la_plantilla> -u <URL_a_escanear> ## escaneo con una plantilla en especifico
+nuclei -t <ruta_a_la_plantilla> -l urls.txt
+nuclei -t <ruta_a_la_plantilla> -u https://example.com -r ## Si deseas escanear recursivamente todas las rutas y subdominios de una URL, puedes usar la opción -r.
+nuclei -t <ruta_a_la_plantilla> -u https://example.com -o resultados.txt ## Si quieres guardar los resultados del escaneo en un archivo en lugar de mostrarlos en la consola, puedes usar la opción -o.
