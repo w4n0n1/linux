@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#_*_ coding: utf8 _*_
+
 import os
 
 def asignar_propietario_grupo(archivo, propietario, grupo):
